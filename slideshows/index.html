@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Slideshow start page</title>
+    <script type="text/javascript">
+
+      // Google Analytics 暂时没卵用
+      // var _gaq = _gaq || [];
+      // _gaq.push(['_setAccount', 'UA-34177998-1']);
+      // _gaq.push(['_trackPageview']);
+
+      // (function() {
+      //   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      //   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      //   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      // })();
+
+    </script>
+
+    <link href="../static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
+      html {
+        font-size: 16px; /* 1rem */
+      }
+
+      body {
+        margin: 0;
+        background-color: #333;
+        font-family: "Avenir Next", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        font-weight: 100;
+        color: #fff;
+      }
+
+      a {
+        color: #ccffcc;
+        text-decoration: none;
+        transition: color 0.5s;
+      }
+
+      a:hover {
+        color: #87ceeb;
+      }
+
+      header {
+        padding: 1rem 2rem;
+      }
+
+      header h1 {
+        margin: 0;
+        padding: 0;
+        color: #ccc;
+        font-size: 1.5rem;
+        font-weight: 100;
+      }
+
+      .item {
+        display: block;
+        border-left: 0 solid transparent;
+        padding: 1.5rem 2rem;
+        color: #fff;
+        font-size: 2rem;
+        text-decoration: none;
+        vertical-align: middle;
+        -webkit-transition: border-width 0.5s, border-color 3s, background-image 3s;
+        -moz-transition: border-width 0.5s, border-color 3s, background-image 3s;
+        transition: border-width 0.5s, border-color 3s, background-image 3s;
+      }
+
+      .item:hover {
+        border-left-width: 1rem;
+        color: #fff;
+        background-color: #222;
+      }
+
+      .item small {
+        opacity: 0.5;
+        margin-left: 2rem;
+        font-size: 50%;
+      }
+
+      footer {
+        padding: 2rem 0;
+        text-align: center;
+        font-size: 1.2rem;
+        color: #bbb;
+      }
+
+      /*********************************************
+       * FONT FACES
+       *********************************************/
+      @font-face {
+        font-family: 'profile';
+        src: url("../static/font-awesome/fonts/fontawesome-webfont.eot");
+        src: url("../static/font-awesome/fonts/FontAwesome.otf") format('embedded-opentype'),
+             url("../static/font-awesome/fonts/fontawesome-webfont.woff") format('woff'),
+             url("../static/font-awesome/fonts/fontawesome-webfont.ttf") format('truetype'),
+             url("../static/font-awesome/fonts/fontawesome-webfont.svg") format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      [class^="icon-"]:before, [class*=" icon-"]:before {
+        font-family: "profile";
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+
+        display: inline-block;
+        text-decoration: inherit;
+        width: 1em;
+        margin-right: .2em;
+        text-align: center;
+        /* opacity: .8; */
+
+        /* For safety - reset parent styles, that can break glyph codes*/
+        font-variant: normal;
+        text-transform: none;
+
+        /* fix buttons height, for twitter bootstrap */
+        line-height: 1em;
+
+        /* Animation center compensation - margins should be symmetric */
+        /* remove if not needed */
+        margin-left: .2em;
+
+        /* you can be more comfortable with increased icons size */
+        /* font-size: 120%; */
+
+        /* Uncomment for 3D effect */
+        /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+      }
+
+      /* 原来的 '\e800' 这种跟我用的这个 fontawesome 版本不同 */
+      .icon-twitter:before { content: '\f099'; } /* '' */
+      .icon-weibo:before { content: '\f18a'; } /* '' */
+      .icon-github-circled:before { content: '\f09b'; } /* '' */
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Slideshows &raquo;   <i class="fa fa-camera-retro fa-lg"></i>Icon fa-lg for test</h1>
+  </header>
+  <nav>
+
+    <a class="item" href="markdown/">Markdown <small>GitHub Guides: Markdown</small></a>
+    <a class="item" href="emmet/">Emmet <small>README.md</small></a>
+
+  </nav>
+  <footer>
+    <address>
+      <p>辣鸡天痕˚ <small>@ <a href="#">我能进有赞吗?</a></small></p>
+      <p class="copyright">Text is available under the <a href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0 License</a></p>
+      <p>
+        <a href="#" title="@天痕˚" class="icon-weibo"></a>
+        <a href="https://twitter.com/" title="@天痕˚" class="icon-twitter"></a>
+        <a href="https://github.com/igoist" title="@天痕˚" class="icon-github-circled"></a>
+      </p>
+    </address>
+  </footer>
+
+<!-- 大佬自己写的的颜色变化控制脚本 -->
+<script src="../static/js/color.js"></script>
+<script>
+var items = [].slice.call(document.querySelectorAll('.item'));
+
+function createStyle(styleText) {
+  var style = document.createElement('style');
+  style.type = 'text/css';
+
+  // <style> element must be appended into DOM before setting `cssText`
+  // otherwise IE8 will interpret the text in IE7 mode.
+  document.body.appendChild(style);
+  if (style.styleSheet) {
+    style.styleSheet.cssText = styleText;
+  } else {
+    style.appendChild(document.createTextNode(styleText));
+  }
+
+  return style;
+}
+
+var gradientTpl = [
+  '.item:nth-child(${n}):hover {',
+    'background-image: -webkit-linear-gradient(-15deg, transparent 40%, ${end} 100%);',
+    'background-image: -moz-linear-gradient(-15deg, transparent 40%, ${end} 100%);',
+    'background-image: linear-gradient(105deg, transparent 40%, ${end} 100%);',
+    'background-repeat: repeat;',
+  '}'
+].join('');
+
+var style;
+function randomize() {
+  var colors = kolor.random({
+    size: items.length,
+    s: 0.7,
+    l: 0.8,
+    space: 'rgba'
+  });
+
+  var styleText = '';
+  items.forEach(function (item, i) {
+    item.style.borderColor = colors[i].css();
+
+    if (style) {
+      style.parentNode.removeChild(style);
+    }
+
+    styleText += gradientTpl.replace(/\$\{n\}/g, i + 1).replace(/\$\{end\}/g, colors[i].a(0.3).css());
+    style = createStyle(styleText);
+  });
+}
+
+setInterval(function () {
+  randomize();
+}, 3000);
+
+randomize();
+</script>
+</body>
+</html>
