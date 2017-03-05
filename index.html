@@ -1,62 +1,45 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+  <link rel="icon" type="image/png" href="./static/img/icon/star.png" />
+  <!-- <link rel="icon" type="image/png" href="./static/img/icon/fluidicon.png" /> -->
+  <title>天痕˚</title>
 
-		<link rel="stylesheet" href="./static/reveal/css/reveal.css">
-		<link rel="stylesheet" href="./static/reveal/css/theme/black.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="./static/reveal/lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? './reveal/css/print/pdf.css' : './reveal/css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-markdown>
-				    <script type="text/template">
-				        # Just Initial Work
+</head>
+
+<body>
 
 
 
 
-				        # 计划列表
-				        > * 转移 index
-				        > * 加入几个功能性按钮
-				    </script>
-				</section>
-				<section>Slide 2</section>
-				<section>Slide 3</section>
-			</div>
-		</div>
 
-		<script src="./static/reveal/lib/js/head.min.js"></script>
-		<script src="./static/reveal/js/reveal.js"></script>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: './static/reveal/plugin/markdown/marked.js' },
-					{ src: './static/reveal/plugin/markdown/markdown.js' },
-					{ src: './static/reveal/plugin/notes/notes.js', async: true },
-					{ src: './static/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+
+
+  <!-- background image generator -->
+  <script src="./static/js/trianglify.min.js"></script>
+  <script>
+    var pattern = Trianglify({
+        width: window.innerWidth,
+        height: window.innerHeight
+    });
+    document.body.style.backgroundImage = 'url(' + pattern.png() + ')';
+    // console.log(pattern.png());
+  </script>
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? './static/reveal/css/print/pdf.css' : './static/reveal/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+</body>
 </html>
