@@ -4,18 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <link rel="icon" type="image/png" href="./static/img/icon/star.png" />
-  <!-- <link rel="icon" type="image/png" href="./static/img/icon/fluidicon.png" /> -->
   <title>天痕˚</title>
 
+  <link rel="icon" type="image/png" href="./static/img/icon/star.png" />
+  <!-- <link rel="icon" type="image/png" href="./static/img/icon/fluidicon.png" /> -->
+
+  <link rel="stylesheet" href="./static/css/shield.css">
+  <link rel="stylesheet" href="./static/css/sunrise.css">
 
 
 </head>
 
 <body>
+  <svg viewbox="-200 -150 400 300">
+    <defs>
+      <line id="ray" x1="-5" x2="5"></line>
+      <clipPath id="cp">
+        <rect x="-200" y="-150" width="400" height="150"></rect>
+      </clipPath>
+    </defs>
+    <line id="line" x1="-76" x2="76"></line>
+    <!-- <text text-anchor="middle" y="45">sunrise</text> -->
+    <g id="sun" clip-path="url(#cp)">
+      <g id="mover">
+        <circle id="main" r="50"></circle>
+        <g id="eyes">
+          <circle r="3" cx="-13"></circle>
+          <circle r="3" cx="13"></circle>
+        </g>
+        <g id="rays">
+          <use xlink:href="#ray" transform="rotate(315) translate(70)"></use>
+          <use xlink:href="#ray" transform="rotate(270) translate(70)"></use>
+          <use xlink:href="#ray" transform="rotate(225) translate(70)"></use>
+          <use xlink:href="#ray" transform="rotate(180) translate(70)"></use>
+          <use xlink:href="#ray" transform="rotate(135) translate(70)"></use>
+          <use xlink:href="#ray" transform="rotate(90) translate(70)"></use>
+          <use xlink:href="#ray" transform="rotate(45) translate(70)"></use>
+          <use xlink:href="#ray" transform="rotate(0) translate(70)"></use>
+        </g>
+      </g>
+    </g>
+  </svg>
 
-
-
+  <div class="shield">
+    <div class="circle-a"></div>
+    <div class="iam">
+      Hi, i am
+      <div class="star-a"></div>
+      <div class="star-b"></div>
+      <div class="corner-a"></div>
+      <div class="corner-b"></div>
+    </div>
+    <div class="name">天痕˚</div>
+    <div class="working-as">
+      <div class="line-left"></div>
+      <div class="line-right"></div>
+    </div>
+    <div class="product-designer">
+      Front-End Engineer
+      <div class="star-a"></div>
+      <div class="star-b"></div>
+      <div class="corner-a"></div>
+      <div class="corner-b"></div>
+    </div>
+    <div class="circle-b"></div>
+  </div>
 
 
 
@@ -25,21 +78,21 @@
   <!-- background image generator -->
   <script src="./static/js/trianglify.min.js"></script>
   <script>
-    var pattern = Trianglify({
-        width: window.innerWidth,
-        height: window.innerHeight
-    });
-    document.body.style.backgroundImage = 'url(' + pattern.png() + ')';
+    // var pattern = Trianglify({
+    //     width: window.innerWidth,
+    //     height: window.innerHeight
+    // });
+    // document.body.style.backgroundImage = 'url(' + pattern.png() + ')';
     // console.log(pattern.png());
   </script>
 
   <!-- Printing and PDF exports -->
   <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? './static/reveal/css/print/pdf.css' : './static/reveal/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
+    // var link = document.createElement( 'link' );
+    // link.rel = 'stylesheet';
+    // link.type = 'text/css';
+    // link.href = window.location.search.match( /print-pdf/gi ) ? './static/reveal/css/print/pdf.css' : './static/reveal/css/print/paper.css';
+    // document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
 </body>
 </html>
