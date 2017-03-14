@@ -16,14 +16,26 @@
 }
 
 #nav section {
-
+  text-align: center;
 }
 
+#form {
+  display: flex;
+  flex-direction: row;
+}
+
+#form label {
+  margin-top: 30px;
+  padding: 18px 18px;
+  height: 28px;
+  line-height: 28px;
+  color: #033;
+}
 #title {
   float: right;
   width: 60%;
   height: 28px;
-  margin-top: 12px;
+  margin-top: 42px;
   text-indent: 10px;
   border-radius: 5px;
   box-shadow: 0 1px 0 rgba(255,255,255,0.24), 0 1px 6px rgba(0,0,0,0.45) inset;
@@ -42,4 +54,22 @@
   /* 两个边栏的宽度设为12em */
   flex: 0 0 12em;
 }
+
+
+/* 既然做了 ripple 效果，就不能再往 li 下面放这种东西 ｜ 直接跟 card 放一起*/
+.et-todolist li:hover::after {
+  position: absolute;
+  top: 40%;
+  left: 2.5%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-top: 5px solid transparent;
+  /*border-right: 5px solid transparent;*/
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #323232;
+}
+
 

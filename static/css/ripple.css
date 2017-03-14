@@ -1,0 +1,30 @@
+.et-todolist .wave li {
+  /*background-color: transparent;*/
+  /*position: relative;*/
+  overflow: hidden;
+  border: none;
+  outline:none;
+  cursor: pointer;
+  /*background: #89669b;*/
+  /*color: white;*/
+  height: 50px;
+  line-height: 50px;
+  margin: 0;
+  padding: 0px 60px;
+  font-size: 22px;
+  -webkit-transition: all 0.25s ease;
+     -moz-transition: all 0.25s ease;
+      -ms-transition: all 0.25s ease;
+       -o-transition: all 0.25s ease;
+          transition: all 0.25s ease;
+}
+
+.et-todolist li:hover {
+  background: #f4c042;
+}
+
+.et-todolist .wave li > div {
+  position:absolute;
+  background-color: rgba(0, 255, 255, 0.3);
+  border-radius: 50%;
+}
