@@ -2,10 +2,10 @@
 
 ## 原计划列表 Old tasks
 - [x] 转移 index
-> * Transfer the index
 - [ ] 加入几个功能性按钮 (暂时只加入了 Menu，但说不定足够了)
-> * Add several functional btn
 - [x] 加入 Shield & Sunrise 开场动画
+> * Transfer the index
+> * Add several functional btn
 > * Add in beginning animation -- Shield & Sunrise
 
 ### 03.19.17 新增 New tasks
@@ -15,7 +15,7 @@
 - [x] 引入 color.js & 相应调用代码，为 .et-nav-v ul li 添加 .nav-item，在 base.css 中写入 border 动画效果
 - [x] 调整 Navgator 下元素基本样式，如 .nav-item ...
 - [ ] 考虑下在何处加入 footer，嵌入 github、twitter、facebook 图标链接，以及 CopyRight
-- [ ] 为 nav-items 准备相关链接
+- [ ] 为 nav-items 准备相关链接，并写入<code>\<small\></code>
 - [ ] 尽早实现 Timeline
 - [ ] 完善 Todolist
 
