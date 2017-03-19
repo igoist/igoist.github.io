@@ -11,11 +11,28 @@
 
   <link rel="stylesheet" href="./static/css/shield.css">
   <link rel="stylesheet" href="./static/css/sunrise.css">
+  <link rel="stylesheet" href="./static/css/base.css">
 
 
 </head>
 
-<body>
+<body class="nav-closed">
+
+  <div id="menu-btn" class="et-menu-button et-icon-menu">
+    <span>Menu</span>
+    <a href="#" class="custom-toggle"><del class="bar"></del><del class="bar"></del><del class="bar"></del></a>
+  </div>
+
+  <div class="et-nav-v">
+    <h3 class="nav-title">Menu</h3>
+    <ul>
+      <li class="nav-home nav-current"><a href="">Home</a></li>
+      <li class="nav-home nav-current"><a href="">Home</a></li>
+      <li class="nav-home nav-current"><a href="">Home</a></li>
+    </ul>
+      <!-- <a class="subscribe-button icon-feed" href="http://delai.me/blog/rss/">Subscribe</a> -->
+  </div>
+
   <svg viewbox="-200 -150 400 300">
     <defs>
       <line id="ray" x1="-5" x2="5"></line>
@@ -77,6 +94,7 @@
 
   <!-- background image generator -->
   <script src="./static/js/trianglify.min.js"></script>
+  <script src="./static/js/base.js"></script>
   <script>
     // var pattern = Trianglify({
     //     width: window.innerWidth,
