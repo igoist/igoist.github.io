@@ -11,7 +11,12 @@
 
   <link rel="stylesheet" href="./static/css/shield.css">
   <link rel="stylesheet" href="./static/css/sunrise.css">
+
+  <!-- <link rel="stylesheet" href="./static/stroll/css/example.css"> -->
+  <link rel="stylesheet" href="./static/stroll/css/stroll.css">
+
   <link rel="stylesheet" href="./static/css/base.css">
+
 
 
 </head>
@@ -20,15 +25,32 @@
 
   <div id="menu-btn" class="et-menu-button et-icon-menu">
     <span>Menu</span>
-    <a href="#" class="custom-toggle"><del class="bar"></del><del class="bar"></del><del class="bar"></del></a>
+    <a class="custom-toggle"><del class="bar"></del><del class="bar"></del><del class="bar"></del></a>
   </div>
 
   <div class="et-nav-v">
-    <h3 class="nav-title">Menu</h3>
-    <ul>
-      <li class="nav-home nav-current"><a href="">Home</a></li>
-      <li class="nav-home nav-current"><a href="">Home</a></li>
-      <li class="nav-home nav-current"><a href="">Home</a></li>
+    <h2 class="et-nav-title">Navigator</h2>
+    <ul class="wave">
+      <li class="nav-item nav-home nav-current"><a href="todolist">Todo List</a></li>
+      <li class="nav-item"><a href="slideshows">Slide Show</a></li>
+      <li class="nav-item"><a href="#">One</a></li>
+      <li class="nav-item"><a href="#">Two</a></li>
+      <li class="nav-item"><a href="#">Three</a></li>
+      <li class="nav-item"><a href="#">Four</a></li>
+      <li class="nav-item"><a href="#">Five</a></li>
+      <li class="nav-item"><a href="#">Six</a></li>
+      <li class="nav-item"><a href="#">Seven</a></li>
+      <li class="nav-item"><a href="#">Eight</a></li>
+      <li class="nav-item"><a href="#">Nine</a></li>
+      <li class="nav-item"><a href="#">Ten</a></li>
+      <li class="nav-item"><a href="#">Eleven</a></li>
+      <li class="nav-item"><a href="#">Twelve</a></li>
+      <li class="nav-item"><a href="#">Thirteen</a></li>
+      <li class="nav-item"><a href="#">Fourteen</a></li>
+      <li class="nav-item"><a href="#">Fifteen</a></li>
+      <li class="nav-item"><a href="#">Sixteen</a></li>
+      <li class="nav-item"><a href="#">Seventeen</a></li>
+      <li class="nav-item"><a href="#">Eighteen</a></li>
     </ul>
       <!-- <a class="subscribe-button icon-feed" href="http://delai.me/blog/rss/">Subscribe</a> -->
   </div>
@@ -94,6 +116,7 @@
 
   <!-- background image generator -->
   <script src="./static/js/trianglify.min.js"></script>
+  <script src="./static/stroll/js/stroll.js"></script>
   <script src="./static/js/base.js"></script>
   <script>
     // var pattern = Trianglify({
@@ -101,7 +124,6 @@
     //     height: window.innerHeight
     // });
     // document.body.style.backgroundImage = 'url(' + pattern.png() + ')';
-    // console.log(pattern.png());
   </script>
 
   <!-- Printing and PDF exports -->
@@ -111,6 +133,66 @@
     // link.type = 'text/css';
     // link.href = window.location.search.match( /print-pdf/gi ) ? './static/reveal/css/print/pdf.css' : './static/reveal/css/print/paper.css';
     // document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+
+
+
+  <script src="./static/js/color.js"></script>
+  <script>
+    var items = [].slice.call(document.querySelectorAll('.nav-item'));
+
+    function createStyle(styleText) {
+      var style = document.createElement('style');
+      style.type = 'text/css';
+
+      // <style> element must be appended into DOM before setting `cssText`
+      // otherwise IE8 will interpret the text in IE7 mode.
+      document.body.appendChild(style);
+      if (style.styleSheet) {
+        style.styleSheet.cssText = styleText;
+      } else {
+        style.appendChild(document.createTextNode(styleText));
+      }
+
+      return style;
+    }
+
+    var gradientTpl = [
+      '.nav-item:nth-child(${n}):hover {',
+        'background-image: -webkit-linear-gradient(-15deg, transparent 40%, ${end} 100%);',
+        'background-image: -moz-linear-gradient(-15deg, transparent 40%, ${end} 100%);',
+        'background-image: linear-gradient(105deg, transparent 40%, ${end} 100%);',
+        'background-repeat: repeat;',
+      '}'
+    ].join('');
+
+    var style;
+    function randomize() {
+      var colors = kolor.random({
+        size: items.length,
+        s: 0.7,
+        l: 0.8,
+        space: 'rgba'
+      });
+
+      var styleText = '';
+      items.forEach(function (item, i) {
+        item.style.borderColor = colors[i].css();
+
+        if (style) {
+          style.parentNode.removeChild(style);
+        }
+
+        styleText += gradientTpl.replace(/\$\{n\}/g, i + 1).replace(/\$\{end\}/g, colors[i].a(0.3).css());
+        style = createStyle(styleText);
+      });
+    }
+
+    setInterval(function () {
+      randomize();
+    }, 3000);
+
+    randomize();
   </script>
 </body>
 </html>
