@@ -25,6 +25,7 @@ body {
   width: 24rem;
   height: 100%;
   background: #111;
+  text-align: center;
   -webkit-transition: all 0.45s ease;
      -moz-transition: all 0.45s ease;
       -ms-transition: all 0.45s ease;
