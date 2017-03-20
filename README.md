@@ -18,6 +18,7 @@
 - [ ] 为 nav-items 准备相关链接，并写入<code>\<small\></code>
 - [ ] 尽早实现 Timeline
 - [ ] 完善 Todolist
+- [ ] font-size 优雅降级、考虑响应式布局
 
 
 # About Slideshows
@@ -29,5 +30,15 @@
 # About Todolist
 
 ## To Be Continued!
+
+
+
+# About Timeline
+
+
+
+# About Resume
+
+
 
 

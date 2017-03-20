@@ -17,8 +17,8 @@ function createInner(x, y) {
   inner.style.height = speed + 'px';
   inner.style.transform = 'scale(1)';
 
-  console.log("e.offsetX: " + x);
-  console.log("e.offsetY: " + y);
+  // console.log("e.offsetX: " + x);
+  // console.log("e.offsetY: " + y);
 
   inner.style.left = (x - inner.offsetWidth/2) + 'px';
   inner.style.top = (y - inner.offsetHeight/2) + 'px';
@@ -60,10 +60,10 @@ for (var i = 0; i < buttons.length; i++) {
 }
 
 
-window.onload = function init(argument) {
-  console.log(argument);
-
-};
+// 这边覆盖了 todolist.js 里的调用
+// window.onload = function init(argument) {
+//   console.log(argument);
+// };
 
 /* ======== Main End ======== */
 var stop_time = Date.now();
