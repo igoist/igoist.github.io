@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Slideshows -- Resume</title>
+  <link rel="icon" type="image/png" href="../static/img/icon/star.png" />
+
+  <link rel="stylesheet" href="../../static/reveal/css/reveal.css">
+  <link rel="stylesheet" href="../../static/reveal/css/theme/egoist.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="../../static/reveal/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '../../static/reveal/css/print/pdf.css' : '../../static/reveal/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+
+  <link rel="stylesheet" href="css/resume.css" />
+
+
+  <!-- for menu & menuBtn -->
+  <link rel="stylesheet" href="../../static/stroll/css/stroll.css">
+  <link rel="stylesheet" href="../../static/css/base.css">
+</head>
+<body>
+
+  <!-- et-navgator begin -->
+  <div id="menu-btn" class="et-menu-button et-icon-menu">
+    <span>Menu</span>
+    <a class="custom-toggle"><del class="bar"></del><del class="bar"></del><del class="bar"></del></a>
+  </div>
+
+  <div class="et-nav-v">
+    <h2 class="et-nav-title">Navigator</h2>
+    <ul class="wave">
+      <li class="nav-item nav-home nav-current"><a href="todolist">Todo List<small>test code - task list</small></a></li>
+      <li class="nav-item"><a href="slideshows">Slide Show</a></li>
+      <li class="nav-item"><a href="timeline">Timeline<small>record the history</small></a></li>
+      <li class="nav-item"><a href="#">One</a></li>
+      <li class="nav-item"><a href="#">Two</a></li>
+      <li class="nav-item"><a href="#">Three</a></li>
+      <li class="nav-item"><a href="#">Four</a></li>
+      <li class="nav-item"><a href="#">Five</a></li>
+      <li class="nav-item"><a href="#">Six</a></li>
+      <li class="nav-item"><a href="#">Seven</a></li>
+      <li class="nav-item"><a href="#">Eight</a></li>
+      <li class="nav-item"><a href="#">Nine</a></li>
+      <li class="nav-item"><a href="#">Ten</a></li>
+      <li class="nav-item"><a href="#">Eleven</a></li>
+      <li class="nav-item"><a href="#">Twelve</a></li>
+      <li class="nav-item"><a href="#">Thirteen</a></li>
+      <li class="nav-item"><a href="#">Fourteen</a></li>
+      <li class="nav-item"><a href="#">Fifteen</a></li>
+      <li class="nav-item"><a href="#">Sixteen</a></li>
+      <li class="nav-item"><a href="#">Seventeen</a></li>
+      <li class="nav-item"><a href="#">Eighteen</a></li>
+    </ul>
+      <!-- <a class="subscribe-button icon-feed" href="http://delai.me/blog/rss/">Subscribe</a> -->
+  </div>
+  <!-- et-navgator end -->
+
+  <div class="reveal">
+    <div class="slides">
+      <section data-background="#eee">
+        <div id="pic-wrap">
+          <div id="pic"></div>
+          <div class="PolarBear"></div>
+          <div class="Liukanshan Liukanshan--in"></div>
+        </div>
+      </section>
+
+      <section data-background="#333" data-background-transition="zoom">
+
+        <h2>Test</h2>
+      </section>
+    </div>
+  </div>
+
+  <script src="../../static/reveal/lib/js/head.min.js"></script>
+  <script src="../../static/reveal/js/reveal.js"></script>
+
+  <script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      history: true,
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [
+        { src: '../../static/reveal/plugin/markdown/marked.js' },
+        { src: '../../static/reveal/plugin/markdown/markdown.js' },
+        { src: '../../static/reveal/plugin/notes/notes.js', async: true },
+        { src: '../../static/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+      ]
+    });
+  </script>
+
+  <!-- egoist's universal component -->
+  <script src="../../static/stroll/js/stroll.js"></script>
+  <script src="./js/base.js"></script>
+
+  <script src="../../static/js/color.js"></script>
+  <script>
+    var items = [].slice.call(document.querySelectorAll('.nav-item'));
+
+    function createStyle(styleText) {
+      var style = document.createElement('style');
+      style.type = 'text/css';
+
+      // <style> element must be appended into DOM before setting `cssText`
+      // otherwise IE8 will interpret the text in IE7 mode.
+      document.body.appendChild(style);
+      if (style.styleSheet) {
+        style.styleSheet.cssText = styleText;
+      } else {
+        style.appendChild(document.createTextNode(styleText));
+      }
+
+      return style;
+    }
+
+    var gradientTpl = [
+      '.nav-item:nth-child(${n}):hover {',
+        'background-image: -webkit-linear-gradient(-15deg, transparent 40%, ${end} 100%);',
+        'background-image: -moz-linear-gradient(-15deg, transparent 40%, ${end} 100%);',
+        'background-image: linear-gradient(105deg, transparent 40%, ${end} 100%);',
+        'background-repeat: repeat;',
+      '}'
+    ].join('');
+
+    var style;
+    function randomize() {
+      var colors = kolor.random({
+        size: items.length,
+        s: 0.7,
+        l: 0.8,
+        space: 'rgba'
+      });
+
+      var styleText = '';
+      items.forEach(function (item, i) {
+        item.style.borderColor = colors[i].css();
+
+        if (style) {
+          style.parentNode.removeChild(style);
+        }
+
+        styleText += gradientTpl.replace(/\$\{n\}/g, i + 1).replace(/\$\{end\}/g, colors[i].a(0.3).css());
+        style = createStyle(styleText);
+      });
+    }
+
+    setInterval(function () {
+      randomize();
+    }, 3000);
+
+    randomize();
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
