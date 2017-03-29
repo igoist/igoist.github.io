@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'profile';
+  src: url("../static/font-awesome/fonts/fontawesome-webfont.eot");
+  src: url("../static/font-awesome/fonts/FontAwesome.otf") format('embedded-opentype'),
+       url("../static/font-awesome/fonts/fontawesome-webfont.woff") format('woff'),
+       url("../static/font-awesome/fonts/fontawesome-webfont.ttf") format('truetype'),
+       url("../static/font-awesome/fonts/fontawesome-webfont.svg") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*
+html {
+
+}*/
+
+body {
+  margin: 0;
+  background-color: #333;
+  background-image: url(../img/rect.png);
+  font-family: "Avenir Next", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-weight: 100;
+  /*color: #fff;*/
+  /*color: #cfc;*/
+}
+
+.font_head {
+  color: #cfc;
+  font-size: 24px;
+}
+
+.font_header {
+  font-size: 20px;
+}
+
+.font_base {
+  font-weight: 200;
+  color: #fff;
+  font-size: 16px;
+}
+
+
+#et a,
+#experience-proj a,
+#introduction a {
+  color: #87ceeb;
+  font-weight: 400;
+  text-decoration: none;
+}
