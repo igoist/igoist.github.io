@@ -7,5 +7,8 @@
 
 ### 剩下的怎么讲呢？先不管了，把问题列举出来：
 
-* 需要修正 z-index 无脑给 timeline 下的属性写了 <code>z-index: 9999</code>，跟 Navigator 导致冲突
-* Media QUERIES：内容物宽高再考虑考虑
+- [x] 需要修正 <code>z-index</code> 无脑给 timeline 下的属性写了 <code>z-index: 9999</code>，跟 Navigator 导致冲突
+- [ ] Media QUERIES：内容物宽高再考虑考虑
+
+
+- [ ] 一个蛮重要的问题：关于 github page 无法加载非 static 目录下，或者说此例中 ./css/timeline.css、js
