@@ -1,3 +1,14 @@
+function postaction() {
+  var todoInp = document.getElementById('title');
+  var todoUl = document.getElementById('todo');
+  // todoInp.addEventListener('change', function() {
+    console.log(todoInp.value);
+    var tmpLi = document.createElement('li');
+    tmpLi.appendChild(document.createTextNode(todoInp.value));
+    todoUl.appendChild(tmpLi);
+  // });
+}
+
 window.onload = function init(argument) {
 
   var start_time = Date.now();
