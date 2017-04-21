@@ -1,0 +1,24 @@
+
+body {
+  margin: 0;
+  background-color: #333;
+  font-family: "Avenir Next", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-weight: 100;
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+#content {
+  margin: auto;
+  width: 800px;
+
+  margin-bottom: 400px;
+}
+
+#content > p {
+  /*padding-left: 20px;*/
+}
