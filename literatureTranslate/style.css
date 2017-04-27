@@ -16,9 +16,27 @@ header {
   margin: auto;
   width: 800px;
 
-  margin-bottom: 400px;
+  margin-bottom: 980px;
+}
+
+#content > h3 {
+  margin-top: 32px;
 }
 
 #content > p {
   /*padding-left: 20px;*/
 }
+
+.i-wrap {
+  margin: 0 auto;
+  /*margin-top: 16px;*/
+  text-align: center;
+}
+
+/*.i-wrap:before {
+  content: '';
+  width: 100% !important;
+  height: 10px !important;
+  margin-top: 40px;
+  padding: 10px 10px;
+}*/
