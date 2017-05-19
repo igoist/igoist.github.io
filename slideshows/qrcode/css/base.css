@@ -1,6 +1,5 @@
 * {
   padding: 0;
-  margin: 0;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -24,7 +23,40 @@ body {
 }
 
 .reveal p > span {
-  content: '';
+  content: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
   width: 42px;
   height: 42px;
+}
+
+#s2 > p {
+  text-align: left;
+}
+
+#s3 > p {
+  text-align: left;
+}
+
+#s4 > img {
+  width: 320px;
+  height: 568px;
+}
+
+#s4 > p {
+  position: absolute;
+  top: 28%;
+  right: 20%;
+  writing-mode: tb-rl;
+  font-size: 1em;
+}
+
+#s-end {
+  text-align: left;
+}
+
+#s-end h1 {
+  font-size: 2.8em;
+}
+
+.reveal #s-end > p {
+  font-size: 1.8em;
 }
