@@ -69,7 +69,7 @@
   </div>
   <!-- et-navgator end -->
 
-  <div class="reveal">
+  <div id="et-tmp-reveal" class="reveal">
     <div class="slides">
       <section data-background="#333">
         <h1 style="color: #fff;">
@@ -83,7 +83,7 @@
         <p>指导老师：黄雷君</p>
       </section>
 
-      <section data-background="#333" data-background-transition="zoom">
+      <!-- <section data-background="#333" data-background-transition="zoom">
         <section>
           <h2 style="color: #61dafb;">论文摘要</h2>
           <p class="fragment" style="margin: 0 auto;width: 640px; text-align: left;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>本文主要讲 iOS 版多角色二维码识别系统的设计与实现，略微介绍了一下移动电话这类设备的大致架构、二维码识别的流程、实现原理，以及要用到的工具、平台、语言、框架，对课题的需求分析，总体设计思路，各个模块的划分，以及具体实现。</p>
@@ -96,7 +96,7 @@
           <h2 class="fragment" style="color: #61dafb;">Keywords：</h2>
           <p class="fragment" style="margin: 0 auto;width: 640px;">QR Code;iOS;Objective-C</p>
         </section>
-      </section>
+      </section> -->
 
       <!-- <section data-background="#333" data-background-transition="zoom">
         <h2>目录</h2>
@@ -117,15 +117,15 @@
 
       <section id="s2">
         <h2 class="fragment" style="color: #61dafb;">主要内容</h2>
-        <p class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本次毕业设计中，我结合多种编程技术开发出了一款基于 iOS 平台的多角色二维码识别系统。举例来说，在实际的产品生产和销售过程中，会产生很多信息，比如产品所用到原材料、其制造成本、运输成本、存在问题、批发价格、零售价格、使用方法等等一系例信息，对于不同的人群，应该提供不同的信息。鉴于此，有必要将产品的信息划分不同的视图，分配给不同的角色，并赋予每一个用户一个角色。而每当不同用户扫描同一个二维码，理应看到不同信息的产品。</p>
+        <p class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本次毕业设计中，我结合多种编程技术开发出了一款基于 iOS 平台的多角色二维码识别系统。举例来说，在实际的产品生产和销售过程中，会产生很多信息，比如产品所用到原材料、其制造成本、运输成本、存在问题、批发价格、零售价格、使用方法等等一系例信息，不同类别的人员、客户，能看到的信息理应有所区别。鉴于此，我将产品的信息划分成了不同的视图，而每一个用户有自己对应的视图。于是，每当所属不同视图的用户们扫描同一个特定的二维码，理应看到产品的不同信息。</p>
       </section>
 
       <section>
         <section id="s3">
           <h2 style="color: #61dafb;">需求分析</h2>
-          <p class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每当不同角色的用户进行登录后使用扫码或者读码功能来识别同一个二维码，经过向服务器数据的请求获得到返回结果，再通过程序处理，应该得到不同信息的产品。</p><br />
-          <p class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;于是，在手机或者平板的 iOS 端上应该要有相应的一套 'LoginForm'，用于支持验证用户登录，此后，应该能看到用户角色等系列的相关信息，并实现扫码、读码等等在 iOS 端上应该实现的相应功能、操作。</p><br />
-          <p class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设计一套相应的数据库表结构，有一套相应的服务器后台来支持手机或平板 iOS 端对于数据 'GET' 请求的收发。</p><br />
+          <p class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每当所属不同视图的用户们在进行登录后使用扫码或者读码功能来识别同一个二维码，经过向服务器数据的请求获得到返回结果，再通过程序处理，应该得到产品的不同信息。</p><p>&nbsp;</p>
+          <p class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;于是，在手机或者平板的 iOS 端上应该要有相应的一套 'LoginForm'，用于支持验证用户登录，此后，应该能看到用户角色等系列的相关信息，并实现扫码、读码等等在 iOS 端上应该实现的相应功能、操作。</p><p>&nbsp;</p>
+          <p class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设计一套相应的数据库表结构，有一套相应的服务器后台来支持手机或平板 iOS 端对于数据 'GET' 请求的收发。</p><p>&nbsp;</p>
           <p class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当然，完成最主要的功能性需求，搭建起应用程序的骨架后，对于作为皮肤的界面的考虑设计也必不可少。</p>
         </section>
 
@@ -136,18 +136,83 @@
       </section>
 
       <section>
+        <section id="s5">
+          <h2 style="color: #61dafb;">总体设计</h2>
+          <p class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;按照前面需求分析，首先一步肯定是需要仔细思考、设计，并在数据库中实现该系统的数据模型，然后搭建起服务器后台，创建好管理员账号。</p><p>&nbsp;</p>
+          <p class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;管理员登录后台后，要能够执行最最基本的增删改查操作。测试成功后，然后再来考虑并实现需要的 api，来与 iOS 端以及其它前端页面进行数据交互。</p><p>&nbsp;</p>
+          <p class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;顺利完成上述数据库、服务器的内容后，便可以开始专注于 iOS 端的开发。</p>
+        </section>
 
+        <section id="s5">
+          <h2 style="color: #61dafb;">iOS端</h2>
+          <p class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;想来想去，iOS 端最主要要做的就是实现用来登录的 'LoginForm'，登录后选项卡中的几个视图中除了布局、动效外的功能性方法，与服务器之间数据交互的逻辑。</p><p>&nbsp;</p>
+          <p class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;基本完成后，可以再考虑对界面布局的细微调整，图标 logo 文案内容，最后可以补上一个启动动画。</p>
+
+        </section>
+      </section>
+
+      <section id="s6">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;总体设计大致如此，在论文中也已经讲过模块的划分，这里不再赘述。</p><p>&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;剩下的时间再来大致讲讲个别具体，后面会有一段时长2分钟的程序演示视频。</p><p>&nbsp;</p>
+        <div class="fragment">
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于租不起域名服务器，之前测试手机与电脑必须在同局域网下进行，且需要对电脑内网 ip 进行广播。</p><p>&nbsp;</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而苹果公司自 2016 年对 Xcode 更新后于普通开发者加上了许多限制，如每次真机调试都需要联网验证，可我手机又太烂，学校移动卡连 3G 都上不了，限于时间，只能放放视频了。</p>
+        </div>
+      </section>
+
+      <section>
+        <section id="s7" data-markdown>
+          <script type="text/template">
+            <h2 style="color: #61dafb;">先讲一个 API</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下面的代码正如注释中所提到，是扫码、读码时所需 api 的一种实现。</p><p>&nbsp;</p>
+            ```python
+            # api_scan(request, p, v) 中主要逻辑，它是扫码、读码时所需 api 的一种实现
+            if request.method == 'GET':
+                p = Product.objects.filter(info=p, is_delete=False)[0]
+                v = View.objects.filter(name=v, is_delete=False)[0]
+                list = ProductAndView.objects.filter(p=p, v=v, is_delete=False)
+                obj_array = []
+                for i in list:
+                    tmp_obj = {}
+                    tmp_obj['index'] = i.index
+                    tmp_obj['info'] = i.info
+                    tmp_obj['p'] = i.p.name
+                    tmp_obj['v'] = i.v.name
+                    obj_array.append(tmp_obj)
+                return HttpResponse(json.dumps(obj_array))
+            ```
+          </script>
+        </section>
+
+        <section id="s8" data-markdown>
+          <script type="text/template">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在 iOS 端扫码、读码的过程中，一旦获得二维码图像，经过解码，系统会将所得字符串进行 UTF-8 格式编码，并与用户信息一同装入 url，向服务器发送 'GET' 请求并等待。</p><p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;直到服务器成功返回 Response，便可以提取返回的 JSON 对象中对应视图的产品信息，并呈现给用户。</p><p>&nbsp;</p>
+
+            ```
+            NSString *webPath =[NSString stringWithFormat: @"http://192.168.1.107:8000/qrcode/api_scan/%@/%@", strInfo, dict[@"view"]];
+            NSURL *url = [NSURL URLWithString: webPath];
+            NSURLRequest *request = [NSURLRequest requestWithURL: url];
+
+            NSURLSessionDataTask *task=[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+              // handle response
+            }];
+            ```
+          </script>
+        </section>
       </section>
 
       <!-- video -->
-      <!-- <section data-background="#aaa" data-background-transition="zoom">
-        <video src="./other/0.mov" width="320" height="568" controls="controls"></video>
-      </section> -->
+      <section data-background="#aaa" data-background-transition="zoom">
+        <div class="video-wrap">
+          <video src="./other/0.mov" width="320" height="568" controls="controls"></video>
+        </div>
+      </section>
 
       <section id="s-end" data-background="#333">
         <h1 class="fragment"><a href="#">最后</a></h1>
         <p class="fragment">
-          感谢各位评委老师 : )
+          感谢各位观看 : )
         </p>
       </section>
     </div>

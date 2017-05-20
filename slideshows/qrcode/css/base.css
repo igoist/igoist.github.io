@@ -10,6 +10,7 @@ body {
 }
 
 
+
 .reveal h1 {
   font-size: 48px;
 }
@@ -49,6 +50,18 @@ body {
   font-size: 1em;
 }
 
+#s5 > p,
+#s6 > p,
+#s8 > p {
+  text-align: left;
+}
+
+#s6 > div > p {
+  text-align: left;
+}
+
+
+
 #s-end {
   text-align: left;
 }
@@ -60,3 +73,16 @@ body {
 .reveal #s-end > p {
   font-size: 1.8em;
 }
+
+#et-tmp-reveal .hljs {
+  text-align: left;
+  font-size: 18px;
+}
+
+/*.video-wrap {
+  margin: 0 auto;
+  width: 320px;
+  height: 568px;
+  border-radius: 10px;
+  overflow：hidden;
+}*/
