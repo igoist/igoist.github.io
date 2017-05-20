@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+
+
+.reveal h1 {
+  font-size: 48px;
+}
+
+.reveal h2 {
+  font-size: 36px;
+}
+
+.reveal p {
+  font-size: 21px;
+}
+
+.reveal p > span {
+  content: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+  width: 42px;
+  height: 42px;
+}
+
+#s2 > p {
+  text-align: left;
+}
+
+#s3 > p {
+  text-align: left;
+}
+
+#s4 > img {
+  width: 320px;
+  height: 568px;
+}
+
+#s4 > p {
+  position: absolute;
+  top: 28%;
+  right: 20%;
+  writing-mode: tb-rl;
+  font-size: 1em;
+}
+
+#s5 > p,
+#s6 > p,
+#s8 > p {
+  text-align: left;
+}
+
+#s6 > div > p {
+  text-align: left;
+}
+
+
+
+#s-end {
+  text-align: left;
+}
+
+#s-end h1 {
+  font-size: 2.8em;
+}
+
+.reveal #s-end > p {
+  font-size: 1.8em;
+}
+
+#et-tmp-reveal .hljs {
+  text-align: left;
+  font-size: 18px;
+}
+
+/*.video-wrap {
+  margin: 0 auto;
+  width: 320px;
+  height: 568px;
+  border-radius: 10px;
+  overflow：hidden;
+}*/
