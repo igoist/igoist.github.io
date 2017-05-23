@@ -31,8 +31,26 @@ header {
 }
 
 .i-wrap {
+  position: relative;
   margin: 0 auto;
+  margin-top: 12px;
+  margin-bottom: 12px;
   text-align: center;
+}
+
+.i-wrap > span {
+  width: 800px;
+  font-size: 12px;
+  line-height: 18px;
+  float: left;
+}
+
+.i-wrap:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 
 section > p {
