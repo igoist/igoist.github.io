@@ -1,0 +1,60 @@
+
+body {
+  margin: 0;
+  background-color: #fff;
+  font-family: "Avenir Next", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-weight: 400;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+#info,
+#content,
+#ps {
+  margin: auto;
+  width: 800px;
+}
+
+#ps {
+  margin-bottom: 200px;
+}
+
+#content > h3 {
+  margin-top: 32px;
+}
+
+#content > p {
+}
+
+.i-wrap {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.i-wrap > span {
+  width: 800px;
+  font-size: 12px;
+  line-height: 18px;
+  float: left;
+}
+
+.i-wrap:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+section > p {
+  margin-top: 0.8em;
+  margin-bottom: 0;
+  /*font-size: 12px;*/
+}
