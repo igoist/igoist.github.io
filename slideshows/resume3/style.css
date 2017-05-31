@@ -2,14 +2,68 @@
 body {
   margin: 0;
   background-color: #fff;
+  background-image: url(../../static/img/bg/furley-bg.png);
   font-family: "Avenir Next", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   font-weight: 400;
   color: #333;
 }
 
 header {
+  margin-top: 20px;
   text-align: center;
   padding: 10px 20px;
+}
+
+.wrap {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 120px;
+  padding: 12px 36px;
+  border-radius: 12px;
+  /*border-radius: 0.25em 0.25em 18em 18em/0.25em 0.25em 0.5em 0.5em;*/
+  height: auto;
+  width: 800px;
+  background-image: url(../../static/img/bg/light-wool-bg.png);
+  /*box-shadow: 0 0 0.5em #e6e6e6 inset, 0 0 0 1px #d4d4d4;*/
+  border: 1px solid #d4d4d4;
+}
+
+.wrap:before,
+.wrap:after {
+  content: "";
+  position: absolute;
+  -webkit-box-shadow: 0 10px 5px rgba(0,0,0,0.37);
+  -moz-box-shadow: 0 10px 5px rgba(0,0,0,0.37);
+  box-shadow: 0 10px 5px rgba(0,0,0,0.37);
+  -webkit-border-radius: 0 0 4em 4em/0 0 0.25em 0.25em;
+  -moz-border-radius: 0 0 4em 4em/0 0 0.25em 0.25em;
+  -ms-border-radius: 0 0 4em 4em/0 0 0.25em 0.25em;
+  -o-border-radius: 0 0 4em 4em/0 0 0.25em 0.25em;
+  border-radius: 0 0 4em 4em/0 0 0.25em 0.25em;
+  width: 50%;
+  height: 50px;
+  bottom: 8px;
+  z-index: -9999;
+}
+
+.wrap:before {
+  left: 10px;
+  -webkit-transform: rotate(-1deg);
+  -moz-transform: rotate(-1deg);
+  -ms-transform: rotate(-1deg);
+  -o-transform: rotate(-1deg);
+  transform: rotate(-1deg);
+}
+
+.wrap:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: rotate(1deg);
+  -moz-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+  transform: rotate(1deg);
 }
 
 #info,
@@ -20,7 +74,7 @@ header {
 }
 
 #ps {
-  margin-bottom: 200px;
+  margin-bottom: 60px;
 }
 
 #content > h3 {
