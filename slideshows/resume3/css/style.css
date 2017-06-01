@@ -2,7 +2,7 @@
 body {
   margin: 0;
   background-color: #fff;
-  background-image: url(../../static/img/bg/furley-bg.png);
+  background-image: url(../../../static/img/bg/furley-bg.png);
   font-family: "Avenir Next", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   font-weight: 400;
   color: #333;
@@ -24,7 +24,7 @@ header {
   /*border-radius: 0.25em 0.25em 18em 18em/0.25em 0.25em 0.5em 0.5em;*/
   height: auto;
   width: 800px;
-  background-image: url(../../static/img/bg/light-wool-bg.png);
+  background-image: url(../../../static/img/bg/light-wool-bg.png);
   /*box-shadow: 0 0 0.5em #e6e6e6 inset, 0 0 0 1px #d4d4d4;*/
   border: 1px solid #d4d4d4;
 }
@@ -72,7 +72,7 @@ header {
   bottom: -4px;
   width: 851px;
   height: 4px;
-  background: url(../../static/img/bg/trick-shadow.png);
+  background: url(../../../static/img/bg/trick-shadow.png);
   background-size: 851px 4px;
   /*border-radius: 4px;*/
   border-bottom-right-radius: 2px;
