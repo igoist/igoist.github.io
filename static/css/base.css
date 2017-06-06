@@ -23,6 +23,7 @@ body {
   z-index: 9990;
   position: fixed;
   top: 0;
+  right: 0;
   width: 24rem;
   height: 100%;
   background: #111;
@@ -32,7 +33,7 @@ body {
       -ms-transition: all 0.45s ease;
        -o-transition: all 0.45s ease;
           transition: all 0.45s ease;
-  transform: translateX(-24rem);
+  transform: translateX(24rem);
   font-family: "Segoe UI", "Avenir Next", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif !important;
 }
 
@@ -74,7 +75,7 @@ body {
   z-index: 9999;
   position: fixed;
   top: 3.6rem;
-  left: 4.2rem;
+  right: 4.4rem;
   width: 10rem;
   height: 3.4rem;
   line-height: 3.4rem;
@@ -94,7 +95,7 @@ body {
 #menu-btn span {
   font-family: "Segoe UI", "Avenir Next", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif !important;
   position: absolute;
-  left: 1.2rem;
+  left: 4.4rem;
   font-size: 1.6rem;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -103,13 +104,17 @@ body {
           user-select: none;
 }
 
+.nav-opened #menu-btn span {
+  left: 3.5rem;
+}
+
 .nav-opened .et-nav-v {
   transform: translateX(0);
 }
 
 .nav-opened #menu-btn {
   width: 90px;
-  transform: translate3d(15.2rem, 0, 0);
+  transform: translate3d(-15rem, 0, 0);
   background: #000;
   color: #fff;
   border-color: #eee;/*#5599ee*/
@@ -186,9 +191,14 @@ body {
   display: block;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 12px;
   display: block;
 }
+
+.nav-opened .custom-toggle {
+  left: 4px;
+}
+
 .custom-toggle .bar:first-child {
   -webkit-transform: translateY(-6px);
      -moz-transform: translateY(-6px);
