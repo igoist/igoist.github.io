@@ -58,7 +58,7 @@ body {
 
 
 .et-nav-v ul li a {
-  /*white-space: nowrap;*/
+  white-space: nowrap;
   padding: 1.5rem 2rem;
   display: block;
   cursor: alias;
