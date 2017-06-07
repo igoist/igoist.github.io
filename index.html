@@ -9,9 +9,6 @@
   <link rel="icon" type="image/png" href="./static/img/icon/star.png" />
   <!-- <link rel="icon" type="image/png" href="./static/img/icon/fluidicon.png" /> -->
 
-  <link rel="stylesheet" href="./static/css/shield.css">
-  <link rel="stylesheet" href="./static/css/sunrise.css">
-
   <link rel="stylesheet" href="./static/stroll/css/stroll.css">
   <link rel="stylesheet" href="./static/css/base.css">
 
@@ -22,15 +19,15 @@
 <body class="nav-closed">
 
   <div id="menu-btn" class="et-menu-button et-icon-menu">
-    <span>Menu</span>
     <a class="custom-toggle"><del class="bar"></del><del class="bar"></del><del class="bar"></del></a>
+    <span>Menu</span>
   </div>
 
   <div class="et-nav-v">
     <h2 class="et-nav-title">Navigator</h2>
     <ul class="wave">
       <li class="nav-item nav-current"><a href="slideshows">Slideshow<small>links almost there</small></a></li>
-      <li class="nav-item"><a href="todolist">Todo List<small>test code - task list</small></a></li>
+      <!-- <li class="nav-item"><a href="todolist">Todo List<small>test code - task list</small></a></li> -->
       <li class="nav-item"><a href="timeline">Timeline<small>record the history</small></a></li>
       <li class="nav-item"><a href="codeRefactoring/color/ES5">Color<small>with ES5</small></a></li>
       <li class="nav-item"><a href="#">One</a></li>
@@ -55,36 +52,14 @@
       <!-- <a class="subscribe-button icon-feed" href="http://delai.me/blog/rss/">Subscribe</a> -->
   </div>
 
-  <svg viewbox="-200 -150 400 300">
-    <defs>
-      <line id="ray" x1="-5" x2="5"></line>
-      <clipPath id="cp">
-        <rect x="-200" y="-150" width="400" height="150"></rect>
-      </clipPath>
-    </defs>
-    <line id="line" x1="-76" x2="76"></line>
-    <!-- <text text-anchor="middle" y="45">sunrise</text> -->
-    <g id="sun" clip-path="url(#cp)">
-      <g id="mover">
-        <circle id="main" r="50"></circle>
-        <g id="eyes">
-          <circle r="3" cx="-13"></circle>
-          <circle r="3" cx="13"></circle>
-        </g>
-        <g id="rays">
-          <use xlink:href="#ray" transform="rotate(315) translate(70)"></use>
-          <use xlink:href="#ray" transform="rotate(270) translate(70)"></use>
-          <use xlink:href="#ray" transform="rotate(225) translate(70)"></use>
-          <use xlink:href="#ray" transform="rotate(180) translate(70)"></use>
-          <use xlink:href="#ray" transform="rotate(135) translate(70)"></use>
-          <use xlink:href="#ray" transform="rotate(90) translate(70)"></use>
-          <use xlink:href="#ray" transform="rotate(45) translate(70)"></use>
-          <use xlink:href="#ray" transform="rotate(0) translate(70)"></use>
-        </g>
-      </g>
-    </g>
-  </svg>
-
+  <div class="et-content">
+    <div style="position: absolute; top: 50%; left: 50%;">
+      <div style="transform: translate3d(-50%, -50%, 0); width: 400px; height: 400px; text-align: center; line-height: 240px;">
+        <p style="font-size: 40px;">博客大改版中</p>
+      </div>
+    </div>
+  </div>
+<!--
   <div class="shield">
     <div class="circle-a"></div>
     <div class="iam">
@@ -108,22 +83,10 @@
     </div>
     <div class="circle-b"></div>
   </div>
+ -->
 
 
 
-
-
-
-  <!-- background image generator -->
-  <script src="./static/js/trianglify.min.js"></script>
-
-  <script>
-    // var pattern = Trianglify({
-    //     width: window.innerWidth,
-    //     height: window.innerHeight
-    // });
-    // document.body.style.backgroundImage = 'url(' + pattern.png() + ')';
-  </script>
 
   <!-- Printing and PDF exports -->
   <script>

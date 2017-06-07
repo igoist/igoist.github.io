@@ -7,5 +7,5 @@ btnMenu.addEventListener('click', function (e) {
 
 
 window.onload = (function() {
-  stroll.bind('.et-nav-v ul');
+  // stroll.bind('.et-nav-v ul');
 });
